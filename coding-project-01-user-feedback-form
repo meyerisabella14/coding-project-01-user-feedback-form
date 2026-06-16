@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-container">
+    <section class="form-card" id="form-section">
+      <h1>User Feedback Form</h1>
+      <p class="subtitle">Please enter your information and comments below.</p>
+
+      <form id="feedback-form">
+        <div class="form-group">
+          <label for="user-name">Name</label>
+          <input 
+            type="text" 
+            id="user-name" 
+            name="userName" 
+            data-tooltip="Enter your full name."
+            placeholder="Your name"
+          />
+          <small class="error-message" id="name-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            data-tooltip="Enter a valid email address."
+            placeholder="you@example.com"
+          />
+          <small class="error-message" id="email-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea 
+            id="comments" 
+            name="comments" 
+            rows="5" 
+            data-tooltip="Type your feedback here."
+            placeholder="Write your feedback..."
+          ></textarea>
+          <p id="char-count">Characters: 0</p>
+          <small class="error-message" id="comments-error"></small>
+        </div>
+
+        <div id="tooltip" class="tooltip"></div>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <section class="feedback-card">
+      <h2>Submitted Feedback</h2>
+      <div id="feedback-display"></div>
+    </section>
+  </main>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>
